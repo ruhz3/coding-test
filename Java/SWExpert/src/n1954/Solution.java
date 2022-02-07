@@ -10,7 +10,6 @@ import java.util.Queue;
  * 1954_달팽이 숫자
  * 메모리 :	19,408 kb
  * 실행시간 :	102 ms
- * 코드길이 :	3,322
  */
 
 public class Solution {

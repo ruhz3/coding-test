@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
  * 1289_원재의 메모리 복구
  * 메모리 :	16,080 kb
  * 실행시간 :	99 ms
- * 코드길이 :	708
  */
 
 public class Solution {
