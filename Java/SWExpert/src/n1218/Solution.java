@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 /*
- * 1289_원재의 메모리 복구
+ * 1218_괄호 짝짓기
  * 메모리 :	19,184 kb
  * 실행시간 :	117 ms
  */
