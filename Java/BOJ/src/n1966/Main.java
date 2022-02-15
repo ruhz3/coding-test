@@ -28,7 +28,6 @@ public class Main {
 			if(canPrint)
 				break;
 		}
-		
 		return queue.poll();
 	}
 	
