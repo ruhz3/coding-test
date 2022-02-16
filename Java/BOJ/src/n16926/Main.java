@@ -1,6 +1,7 @@
 package n16926;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -12,6 +13,8 @@ public class Main {
 	static int[][] map;
 	
 	public static void main(String[] args) throws IOException {
+		long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
+		System.setIn(new FileInputStream("./src/n16926/16926.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
 		
@@ -62,5 +65,8 @@ public class Main {
 			result.append("\n");
 		}
 		System.out.println(result.toString());
+		long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+		long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
+		System.out.println("시간차이(ms) : "+ secDiffTime);
 	}
 }
