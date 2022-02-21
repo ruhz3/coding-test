@@ -17,7 +17,7 @@ class Gear {
 			list.add(s.charAt(i) - '0');
 	}
 	public void rotate(int waveDir, int rotateDir) {
-		// 양쪽 재귀 호출
+		// 양쪽 재귀 호출 
 		if(left != null && waveDir != -1 && (left.getRight() != this.getLeft()))
 			left.rotate(1, rotateDir * -1);
 		if(right != null && waveDir != 1 && (right.getLeft() != this.getRight()))
