@@ -40,7 +40,7 @@ public class Solution {
 			for(int i = 0; i < N; i++) {
 				prices[i] = Integer.parseInt(st.nextToken());
 			}
-			// 01. 매수 타이밍을 뒤에서 부터 계산한다.
+			// 01. 매도 타이밍을 뒤에서 부터 계산한다.
 			int maxPrice = 0;
 			boolean isPeak = true;
 			for(int i = N-1; i >= 0; i--) {
@@ -55,7 +55,7 @@ public class Solution {
 					continue;
 				}
 			}
-			// 02. 앞에서 부터 매집해서 매수 타이밍에 판다.
+			// 02. 앞에서 부터 매수해서 매도 타이밍에 판다.
 			if(stack.size() != 0) {
 				Timing t = stack.pop();
 				int timingIdx = t.time;

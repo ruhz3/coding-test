@@ -37,6 +37,8 @@ public class Main {
 		DFS(V);
 		Arrays.fill(isVisited, false);
 		result.append("\n");
+		result.append(V).append(" ");
+		isVisited[V] = true;
 		BFS(V);
 		
 		System.out.println(result.toString());
@@ -57,14 +59,10 @@ public class Main {
 	}
 	
 	private static void BFS(int num) {
-		if(isVisited[num]) {
-			queue.poll();
-			return;
-		}
-		isVisited[num] = true;
-		result.append(num).append(" ");
 		for(int i = 1; i <= N; i++) {
 			if(nodes[num][i] && !isVisited[i]) {
+				result.append(i).append(" ");
+				isVisited[i] = true;
 				queue.add(i);
 			}
 		}

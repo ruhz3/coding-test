@@ -25,7 +25,6 @@ public class Solution {
 				table[i] = br.readLine().toCharArray();
 			}
 			// 01
-			Queue<Integer> queue = 
 		}
 	}
 }
