@@ -1,4 +1,4 @@
-package SKT_02;
+package SKT_01_02;
 
 public class SKT_02 {
 	public static void main(String[] args) {

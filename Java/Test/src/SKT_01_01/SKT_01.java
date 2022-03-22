@@ -1,4 +1,4 @@
-package SKT_01;
+package SKT_01_01;
 import java.util.ArrayList;
 import java.util.Collections;
 
