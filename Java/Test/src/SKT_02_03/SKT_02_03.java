@@ -20,7 +20,6 @@ class Solution {
         	adj[a[i][0]][a[i][1]] = true;
         	adj[a[i][1]][a[i][0]] = true;
         }
-        for(int i = 0; i < N)
         return answer;
     }
     
