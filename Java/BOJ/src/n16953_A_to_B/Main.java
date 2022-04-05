@@ -21,7 +21,7 @@ public class Main {
 				isImpossible = true;
 				break;
 			}
-			if(B%10 == 1) B /= 10;
+			if(B % 10 == 1) B /= 10;
 			else B /= 2;
 			count++;
 		}
