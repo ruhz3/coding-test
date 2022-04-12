@@ -29,7 +29,7 @@ public class Solution {
 				b = b * (r-i)%p;
 			}
 			long answer = (a%p * div(b, p-2)%p) %p;
-			sb.append("#").append(tc).append(" ").append(answer);
+			sb.append("#").append(tc).append(" ").append(answer).append("\n");
 		}
 		System.out.println(sb.toString());
 	}
