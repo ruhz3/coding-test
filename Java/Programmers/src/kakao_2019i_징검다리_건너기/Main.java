@@ -12,7 +12,7 @@ public class Main {
 	}
 }
 
-class Solution {
+class Solution { 
     public int solution(int[] stones, int k) {
     	int N = stones.length;
     	
