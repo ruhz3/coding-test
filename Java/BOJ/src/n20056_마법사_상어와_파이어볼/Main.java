@@ -1,4 +1,5 @@
 package n20056_마법사_상어와_파이어볼;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,7 +8,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
-
 
 public class Main {
 	static List<Fireball> list = new LinkedList<>();
