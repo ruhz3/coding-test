@@ -27,13 +27,13 @@ public class Solution {
 			
 			String input = br.readLine();
 			int len = input.length();
-			int idx = 0;
+			int index = 0;
 			
 			boolean isError = false;
-			while(idx < len) {
-				char key = input.charAt(idx++);
-				int num1 = input.charAt(idx++) - '0';
-				int num2 = input.charAt(idx++) - '0';
+			while(index < len) {
+				char key = input.charAt(index++);
+				int num1 = input.charAt(index++) - '0';
+				int num2 = input.charAt(index++) - '0';
 				if(!count(key, 10*num1 + num2)) {
 					isError = true;
 					break;

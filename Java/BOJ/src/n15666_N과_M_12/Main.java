@@ -35,13 +35,13 @@ public class Main {
 		System.out.println(result.toString());
 	}
 	
-	private static void print(String ret, int idx, int cnt) {
+	private static void print(String ret, int index, int cnt) {
 		if(cnt == M) {
 			result.append(ret).append("\n");
 			return;
 		}
-		// i를 전달받은 idx와 크거나 같은 범위에서 순회한다.
-		for(int i = idx, len = list.size(); i < len; i++) {
+		// i를 전달받은 index와 크거나 같은 범위에서 순회한다.
+		for(int i = index, len = list.size(); i < len; i++) {
 			print(ret + list.get(i) + " ", i, cnt+1);
 		}
 		return;

@@ -35,7 +35,7 @@ public class Main {
 		printKey(-1, false, 0, "");
 	}
 	
-	public static void printKey(int idx, boolean hasVowel, int consonantCount, String nowKey) {
+	public static void printKey(int index, boolean hasVowel, int consonantCount, String nowKey) {
 		// 00. 목표 문자열 수, 최소 모음/자음 수를 만족했다면 출력한다.
 		String key = nowKey;
 		if((key.length() == L)) {
@@ -43,7 +43,7 @@ public class Main {
 			return;
 		}
 		// 01. 재귀로 다음 문자를 포함해 호출한다.
-		for(int i = idx+1; i < C; i++) {
+		for(int i = index+1; i < C; i++) {
 			char word = list.get(i);
 			boolean isVowel = (word == 'a' || word == 'e' || word == 'i' || word == 'o' || word == 'u');
 			printKey(i, hasVowel || isVowel,

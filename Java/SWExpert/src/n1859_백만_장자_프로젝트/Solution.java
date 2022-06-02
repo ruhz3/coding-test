@@ -58,14 +58,14 @@ public class Solution {
 			// 02. 앞에서 부터 매수해서 매도 타이밍에 판다.
 			if(stack.size() != 0) {
 				Timing t = stack.pop();
-				int timingIdx = t.time;
+				int timingindex = t.time;
 				int timingPrice = t.price;
 				long sum = 0;
 				for(int i = 0; i < N; i++) {
-					if(i == timingIdx) {
+					if(i == timingindex) {
 						if(stack.size() == 0) break;
 						t = stack.pop();
-						timingIdx = t.time;
+						timingindex = t.time;
 						timingPrice = t.price;
 						continue;
 					}

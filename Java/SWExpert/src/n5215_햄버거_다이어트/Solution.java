@@ -17,10 +17,10 @@ public class Solution {
 	static int N;
 	static int L;
 	
-	public static int findBestCombination(int idx, int nowScore, int nowCalory) {
+	public static int findBestCombination(int index, int nowScore, int nowCalory) {
 		// 00. 현재 인덱스 이후의 모든 원소들을 하나씩 넣어본다. 
 		int maxScore = nowScore;
-		for(int i = idx+1; i < N; i++) {
+		for(int i = index+1; i < N; i++) {
 			int score;
 			
 			// 01. 칼로리 기준치를 넘어가면 넣을 수 없다.

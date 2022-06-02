@@ -31,16 +31,16 @@ class Solution {
     
     private long calculate(String expression, int count) {
     	if(count == 3) return Long.parseLong(expression);
-    	int idx = order[count];
-    	String[] list = expression.split(ops[idx]);
+    	int index = order[count];
+    	String[] list = expression.split(ops[index]);
     	
     	long res = calculate(list[0], count+1);
     	for(int i = 1; i < list.length; i++) {
-    		if(ops[idx].equals("\\*")) {
+    		if(ops[index].equals("\\*")) {
     			res *= calculate(list[i], count+1);
-    		} else if(ops[idx].equals("\\+")) {
+    		} else if(ops[index].equals("\\+")) {
     			res += calculate(list[i], count+1);
-    		} else if(ops[idx].equals("\\-")) {
+    		} else if(ops[index].equals("\\-")) {
     			res -= calculate(list[i], count+1);
     		}
     	}

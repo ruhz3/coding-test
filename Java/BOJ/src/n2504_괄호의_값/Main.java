@@ -40,26 +40,26 @@ public class Main {
 		int result = 0;
 		
 		char openChar = '0';
-		int openIdx = 0;
-		int closeIdx = 0;
+		int openindex = 0;
+		int closeindex = 0;
 		boolean isClosed = true;
 		for(int i = start; i < end; i++) {
 			// 닫혀 있는 데, 해당 레벨을 만난 경우 
 			if(isClosed && level[i] == lv) {
 				openChar = input.charAt(i);
-				openIdx = i;
+				openindex = i;
 				isClosed = false;
 				continue;
 			}
 			// 열려 있는데, 해당 레벨의 닫는 문자를 만난 경우
 			if(!isClosed && level[i] == lv) {
-				closeIdx = i;
+				closeindex = i;
 				int value = 0;
 				if(openChar == '(') value = 2;
 				if(openChar == '[') value = 3;
 				
-				if(closeIdx - openIdx == 1) result += value;
-				else result += value * calculate(openIdx+1, closeIdx, lv+1);
+				if(closeindex - openindex == 1) result += value;
+				else result += value * calculate(openindex+1, closeindex, lv+1);
 				isClosed = true;
 				continue;
 			}

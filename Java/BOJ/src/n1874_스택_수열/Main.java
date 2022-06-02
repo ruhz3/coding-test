@@ -15,7 +15,7 @@ public class Main {
 			seq[i] = Integer.parseInt(br.readLine());
 		}
 		
-		// 01. num은 증가 연산만 하며 오름차순을 유지한다. target을 pop하는 것이 반복문의 목적이다.
+		// 01. num은 증가 연산만 하며 오름차순을 유지한다. target을 poll하는 것이 반복문의 목적이다.
 		StringBuilder sb = new StringBuilder();
 		Stack<Integer> stack = new Stack<Integer>();
 		int target;
@@ -23,9 +23,9 @@ public class Main {
 		for (int i = 0; i < n; i++) {
 			target = seq[i];
 			while (true) {
-				// 02-1. target이 현재 push 할 수 있는 번호보다 크다면 push한다.
-				// 02-2. target이 현재 push할 수 있는 값과 같다면, push-pop이 연속으로 일어날 것이므로 넣었다 뺀 셈 친다.
-				// 02-3. target이 현재 push 할 수 있는 번호보다 작다면 stack 안에서 찾아야 하므로 꺼내야 한다.
+				// 02-1. target이 현재 offer 할 수 있는 번호보다 크다면 offer한다.
+				// 02-2. target이 현재 offer할 수 있는 값과 같다면, offer-poll이 연속으로 일어날 것이므로 넣었다 뺀 셈 친다.
+				// 02-3. target이 현재 offer 할 수 있는 번호보다 작다면 stack 안에서 찾아야 하므로 꺼내야 한다.
 				if (target > num) {
 					stack.push(num++);
 					sb.append("+");

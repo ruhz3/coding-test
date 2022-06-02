@@ -32,7 +32,7 @@ public class Main {
 		System.out.println(isDone ? result.toString() : -1);
 	}
 	
-	private static void giveDuck(int idx, int sum, int cnt) {
+	private static void giveDuck(int index, int sum, int cnt) {
 		if(cnt == P && sum == E && !isDone) {
 			isDone = true;
 			result = new StringBuilder();
@@ -40,11 +40,11 @@ public class Main {
 				result.append(plan[i]).append(" ");
 			return;
 		}
-		if(cnt > P || idx >= N-1 || isDone) {
+		if(cnt > P || index >= N-1 || isDone) {
 			return;
 		}
 		
-		for(int i = idx + 1; i < N; i++) {
+		for(int i = index + 1; i < N; i++) {
 			for(int j = range[i][0]; j <= range[i][1]; j++) {
 				plan[i] = j;
 				giveDuck(i, sum+j, cnt+1);

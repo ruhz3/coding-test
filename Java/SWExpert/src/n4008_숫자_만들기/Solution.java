@@ -61,12 +61,12 @@ public class Solution {
 	}
 	private static void cal() {
 		int result = nums[0];
-		int idx = 1;
+		int index = 1;
 		for(int op : state) {
-			if(op == 0) result += nums[idx++];
-			else if(op == 1) result -= nums[idx++];
-			else if(op == 2) result *= nums[idx++];
-			else result /= nums[idx++];
+			if(op == 0) result += nums[index++];
+			else if(op == 1) result -= nums[index++];
+			else if(op == 2) result *= nums[index++];
+			else result /= nums[index++];
 		}
 		maxResult = Math.max(maxResult, result);
 		minResult = Math.min(minResult, result);
@@ -93,9 +93,9 @@ public class Solution {
             
             // 00. ops는 개수가 아니라, 실제 연산자를 위치 시킨다. 
             st = new StringTokenizer(br.readLine(), " ");
-            for(int op = 0, idx = 0; op < 4; op++) {
+            for(int op = 0, index = 0; op < 4; op++) {
             	int n = Integer.parseInt(st.nextToken());
-            	for(int i = 0; i < n; i++) ops[idx++] = op;
+            	for(int i = 0; i < n; i++) ops[index++] = op;
             }
             
             // 01. nums에 입력 받는다.

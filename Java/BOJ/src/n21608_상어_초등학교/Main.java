@@ -104,7 +104,7 @@ public class Main {
 			int min = 1;
 			int minR = 0;
 			int minC = 0;
-			int emptyCount = 0;
+			int isEmptyCount = 0;
 			for (int r = 0; r < N; r++) {
 				for (int c = 0; c < N; c++) {
 					// 04. 우선순위가 크거나 같다면 일단 빈 자리를 계산한다.
@@ -124,15 +124,15 @@ public class Main {
 						minR = r;
 						minC = c;
 						min = classRoom[r][c];
-						emptyCount = newCount;
+						isEmptyCount = newCount;
 						continue;
 					}
 					// 06. 우선순위가 같으면 빈 자리 수를 비교해준다.
-					if (classRoom[r][c] == min && newCount > emptyCount) {
+					if (classRoom[r][c] == min && newCount > isEmptyCount) {
 						minR = r;
 						minC = c;
 						min = classRoom[r][c];
-						emptyCount = newCount;
+						isEmptyCount = newCount;
 						continue;
 					}
 				}

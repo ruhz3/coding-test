@@ -150,17 +150,17 @@ public class Main {
 		System.out.println(getMinBlindSpot(0));
 	}
 
-	private static int getMinBlindSpot(int idx){
+	private static int getMinBlindSpot(int index){
 		// * 방향을 모두 결정했다면 결과를 계산해본다.
-		if(idx >= len) {
+		if(index >= len) {
 			return calBlindSpot();
 		}
 		// 각 CCTV의 방향을 결정해본다.
 		int min = Integer.MAX_VALUE;
 		for(int i = 0; i < 4; i++) {
-			cctvs.get(idx).rotate(i, false);
-			min = Math.min(min, getMinBlindSpot(idx+1));
-			cctvs.get(idx).rotate(i, true);
+			cctvs.get(index).rotate(i, false);
+			min = Math.min(min, getMinBlindSpot(index+1));
+			cctvs.get(index).rotate(i, true);
 		} 
 		return min;
 	}

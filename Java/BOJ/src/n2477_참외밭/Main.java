@@ -20,23 +20,23 @@ public class Main {
 		
 		int maxHeight = 0;
 		int maxWidth = 0;
-		int maxHeightIdx = 0;
-		int maxWidthIdx = 0;
+		int maxHeightindex = 0;
+		int maxWidthindex = 0;
 		for(int i = 0; i < 6; i++) {
 			if(input[i][0] <= 2) {
 				if(input[i][1] > maxWidth) {
 					maxWidth = input[i][1];
-					maxWidthIdx = i;
+					maxWidthindex = i;
 				}
 			} else {
 				if(input[i][1] > maxHeight) {
 					maxHeight = input[i][1];
-					maxHeightIdx = i;
+					maxHeightindex = i;
 				}
 			}
 		}
-		int width = Math.abs(input[(maxHeightIdx - 1 + 6) % 6][1] - input[(maxHeightIdx + 1) % 6][1]);
-		int height = Math.abs(input[(maxWidthIdx - 1 + 6) % 6][1] - input[(maxWidthIdx + 1) % 6][1]);
+		int width = Math.abs(input[(maxHeightindex - 1 + 6) % 6][1] - input[(maxHeightindex + 1) % 6][1]);
+		int height = Math.abs(input[(maxWidthindex - 1 + 6) % 6][1] - input[(maxWidthindex + 1) % 6][1]);
 		System.out.println((maxHeight * maxWidth - width * height) * K);
 	}
 }

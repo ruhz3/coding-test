@@ -15,14 +15,14 @@ public class Solution {
 	static int[] weights = new int[1000];
 	static int T, N, M;
 	
-	public static int getMaxSum(int idx, int nowWeight, int nowCarry) {
+	public static int getMaxSum(int index, int nowWeight, int nowCarry) {
 		// 00. 양손 들고 있는 경우에만 반환한다.
 		if (nowCarry == 2) {
 			return nowWeight;
 		}
 		// 01. 재귀로 최댓값을 찾아내고, default 리턴 값은 -1이다.
 		int maxSum = -1;
-		for(int i = idx + 1; i < N; i++) {
+		for(int i = index + 1; i < N; i++) {
 			if(nowWeight + weights[i] > M) continue;
 			int sum = getMaxSum(i, nowWeight + weights[i], nowCarry+1);
 			if(sum > maxSum) maxSum = sum;

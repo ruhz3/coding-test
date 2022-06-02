@@ -36,12 +36,12 @@ public class Solution {
 		}
 		System.out.println(result.toString());
 	}
-	private static int makeRecipe(int idx, int cnt) {
+	private static int makeRecipe(int index, int cnt) {
 		if(cnt == N/2) return getDiff();
-		if(idx >= N) return Integer.MAX_VALUE;
+		if(index >= N) return Integer.MAX_VALUE;
 
 		int minDiff = Integer.MAX_VALUE;
-		for(int i = idx+1; i < N; i++) {
+		for(int i = index+1; i < N; i++) {
 			recipe[i] = true;
 			minDiff = Math.min(minDiff, makeRecipe(i, cnt+1));
 			recipe[i] = false;

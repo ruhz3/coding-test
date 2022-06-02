@@ -36,16 +36,16 @@ class Solution {
         int len = s.length();
         
         StringBuilder number = new StringBuilder();
-        int idx = 0;
-        while(idx < len) {
-        	if(s.charAt(idx) >= 'a' && s.charAt(idx) <='z') {
-        		String key = s.substring(idx, idx+2);
+        int index = 0;
+        while(index < len) {
+        	if(s.charAt(index) >= 'a' && s.charAt(index) <='z') {
+        		String key = s.substring(index, index+2);
         		Num num = map.get(key);
         		number.append(num.value);
-        		idx += num.length;
+        		index += num.length;
         	} else {
-        		number.append(s.charAt(idx));
-        		idx++;        		
+        		number.append(s.charAt(index));
+        		index++;        		
         	}
         }
         return Integer.parseInt(number.toString());

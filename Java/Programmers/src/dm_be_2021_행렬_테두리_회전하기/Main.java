@@ -20,9 +20,9 @@ class Solution {
         
         // 00. 숫자가 순서대로 입력된 배열 map을 생성한다.
         int[][] map = new int[rows+1][columns+1];
-        for(int i = 1, idx = 1; i <= rows; i++) {
+        for(int i = 1, index = 1; i <= rows; i++) {
             for(int j = 1; j <= columns; j++) {
-                map[i][j] = idx++;
+                map[i][j] = index++;
             }
         }
         // 01. 각 회전을 수행한다.

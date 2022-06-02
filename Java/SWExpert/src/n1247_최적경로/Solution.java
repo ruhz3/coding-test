@@ -58,10 +58,10 @@ public class Solution {
 		int y = office[1];
 		int sum = 0;
 		for(int i = 0; i < N; i++) {
-			int idx = plan[i];
-			sum += getDistance(x, y, customers[idx][0], customers[idx][1]);
-			x = customers[idx][0];
-			y = customers[idx][1];
+			int index = plan[i];
+			sum += getDistance(x, y, customers[index][0], customers[index][1]);
+			x = customers[index][0];
+			y = customers[index][1];
 		}
 		return sum + getDistance(x, y, home[0], home[1]);
 	}

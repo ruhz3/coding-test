@@ -51,7 +51,7 @@ public class Main {
 			moveBack(command, trainNum-1);
 			break;
 		case 4:
-			moveFront(command, trainNum-1);
+			movepeek(command, trainNum-1);
 			break;
 		default:
 			break;
@@ -80,7 +80,7 @@ public class Main {
 		trains[trainNum] = trains[trainNum] << 1;
 		return;
 	}
-	private static void moveFront(int command, int trainNum) {
+	private static void movepeek(int command, int trainNum) {
 		trains[trainNum] = trains[trainNum] >> 1;
 		return;
 	}

@@ -29,9 +29,9 @@ public class Main{
 		}
 		int maxScore = 0;
 		do {
-			for(int i = 0, idx = 0; i < 8; i++, idx++) {
-				if(idx == 3) idx++;
-				finalEntry[idx] = entry[i];
+			for(int i = 0, index = 0; i < 8; i++, index++) {
+				if(index == 3) index++;
+				finalEntry[index] = entry[i];
 			}
 			maxScore = Math.max(maxScore, play());
 		} while(nextPermutation());
@@ -39,7 +39,7 @@ public class Main{
 	}
 	
 	private static int play() {
-		int entryIdx = 0;
+		int entryindex = 0;
 		int score = 0;
 		
 		for (int inn = 0; inn < N; inn++) {
@@ -50,7 +50,7 @@ public class Main{
 			}
 			// 01. 3 아웃이 나올 때 까지 게임을 진행한다.
 			while (out < 3) {
-				int player = finalEntry[entryIdx % 9];
+				int player = finalEntry[entryindex % 9];
 				int hit = hitTable[inn][player];
 				if (hit == 0) {
 					out++;
@@ -68,7 +68,7 @@ public class Main{
 						}
 					}
 				}
-				entryIdx++;
+				entryindex++;
 			}
 		}
 		return score;

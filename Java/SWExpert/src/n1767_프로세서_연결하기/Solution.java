@@ -58,30 +58,30 @@ public class Solution {
 		System.out.println(result.toString());
 	}
 	
-	public static void combination(int idx, int cnt, int R) {
+	public static void combination(int index, int cnt, int R) {
 		if(cnt == R) {
 			dfs(0, 0);
 			return;
 		}
-		for(int i = idx; i < size; i++) {
+		for(int i = index; i < size; i++) {
 			isVisited[i] = true;
 			combination(i + 1, cnt + 1, R);
 			isVisited[i] = false;
 		}
 	}
 	
-	public static void dfs(int idx, int cnt) {
-		if(idx == size) {
+	public static void dfs(int index, int cnt) {
+		if(index == size) {
 			min = Math.min(min, cnt);
 			return;
 		}
-		if(!isVisited[idx]) {
-			dfs(idx + 1, cnt);
+		if(!isVisited[index]) {
+			dfs(index + 1, cnt);
 			return;
 		}
 		for(int dir = 0; dir < 4; dir++) {
-			int nr = cores[idx].r;
-			int nc = cores[idx].c;
+			int nr = cores[index].r;
+			int nc = cores[index].c;
 			int tmp = 0;
 			boolean isDone = false;
 			while(true) {
@@ -95,11 +95,11 @@ public class Solution {
 				map[nr][nc] = 2;
 				tmp++;
 			}
-			if(isDone) dfs(idx + 1, cnt + tmp);
+			if(isDone) dfs(index + 1, cnt + tmp);
 			while(true) {
 				nr -= rowDir[dir];
 				nc -= colDir[dir];
-				if(nr == cores[idx].r && nc == cores[idx].c) break;
+				if(nr == cores[index].r && nc == cores[index].c) break;
 				map[nr][nc] = 0;
 			}
 		}

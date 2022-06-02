@@ -7,10 +7,10 @@ import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 class Pair{
-	int idx;
+	int index;
 	int height;
-	public Pair(int idx, int height) {
-		this.idx = idx;
+	public Pair(int index, int height) {
+		this.index = index;
 		this.height = height;
 	}
 }
@@ -31,7 +31,7 @@ public class Main {
 			while(!stairs.isEmpty()) {
 				// 02. 나보다 크다면 벽의 인덱스를 출력하고, 자신의 인덱스를 기록한다.
 				if(p.height < stairs.peek().height) {
-					result.append(stairs.peek().idx+1).append(" ");
+					result.append(stairs.peek().index+1).append(" ");
 					stairs.addFirst(p);
 					isTallest = false;
 					break;

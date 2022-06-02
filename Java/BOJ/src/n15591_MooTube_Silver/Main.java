@@ -10,10 +10,10 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 class Pair {
-	int idx;
+	int index;
 	int edge;
-	public Pair(int idx, int edge) {
-		this.idx = idx;
+	public Pair(int index, int edge) {
+		this.index = index;
 		this.edge = edge;
 	}
 }
@@ -68,9 +68,9 @@ public class Main {
 			int n = queue.poll();
 			ArrayList<Pair> list = map[n];
 			for(Pair p : list) {
-				if(isVisited[p.idx] || p.edge < k) continue;
-				isVisited[p.idx] = true;
-				queue.add(p.idx);
+				if(isVisited[p.index] || p.edge < k) continue;
+				isVisited[p.index] = true;
+				queue.add(p.index);
 				count++;
 			}
 		}

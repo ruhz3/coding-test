@@ -26,18 +26,18 @@ public class Main {
 		// 00. 첫번째 주사위의 밑면을 정한다.
 		int maxSum = 0;
 		for(int i = 0; i < 6; i++) {
-			int bottomIdx = i;
-			int topIdx = map[i];
+			int bottomindex = i;
+			int topindex = map[i];
 			
 			// 01. 현재 밑면 기준 측면 최고값을 구한다.
 			int max = 0;
 			for(int j = 0; j < 6; j++) {
-				if(j != bottomIdx && j != topIdx)
+				if(j != bottomindex && j != topindex)
 					max = Math.max(max, dice[0][i]);
 			}
 			
 			// 02. 현재 밑면을 기준으로 탑을 쌓은 결과를 반환한다.
-			maxSum = Math.max(maxSum, max + maxDiceSum(1, dice[0][topIdx]));
+			maxSum = Math.max(maxSum, max + maxDiceSum(1, dice[0][topindex]));
 		}
 		System.out.println(maxSum);
 		
@@ -47,23 +47,23 @@ public class Main {
 			return 0;
 		
 		// 00. 이전 주사위의 윗면과 일치하는 면을 밑면으로 설정한다.
-		int bottomIdx = 0;
+		int bottomindex = 0;
 		for(int i = 0; i < 6; i++) {
 			if(dice[count][i] == bottom) {
-				bottomIdx = i;
+				bottomindex = i;
 				break;
 			}
 		}
 		// 01. 밑면의 맞은편 면을 찾는다.(다음 주사위의 밑면이 된다)
-		int topIdx = map[bottomIdx];
+		int topindex = map[bottomindex];
 		
 		// 02. 윗면, 밑면을 제외하고 측면 최고 값을 구한다.
 		int max = 0;
 		for(int i = 0; i < 6; i++) {
-			if(i != topIdx && i != bottomIdx)
+			if(i != topindex && i != bottomindex)
 				max = Math.max(max, dice[count][i]);
 		}
 		// 03. 위에 쌓을 주사위들 옆면 최댓값의 합과 자신을 더해 반환한다.
-		return max + maxDiceSum(count+1, dice[count][topIdx]);
+		return max + maxDiceSum(count+1, dice[count][topindex]);
 	}
 }

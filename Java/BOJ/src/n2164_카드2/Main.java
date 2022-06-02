@@ -18,7 +18,7 @@ public class Main {
 		// 01. 문제 그대로 숫자를 다뤄준다.
 		while(list.size() > 1) {
 			list.removeFirst();
-			list.add(list.pop());
+			list.add(list.poll());
 		}
 		// 02. 남은 원소를 반환한다.
 		System.out.println(list.peek());

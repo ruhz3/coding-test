@@ -46,14 +46,14 @@ public class Solution {
 		System.out.println(result.toString());
 	}
 	
-	private static int getViewCount(int idx) {
+	private static int getViewCount(int index) {
 		// 00. 자신 주변 4개 셀 중 최대값을 찾는다.
-		pQueue.add(buildings[idx-2]);
-		pQueue.add(buildings[idx-1]);
-		pQueue.add(buildings[idx+1]);
-		pQueue.add(buildings[idx+2]);
+		pQueue.add(buildings[index-2]);
+		pQueue.add(buildings[index-1]);
+		pQueue.add(buildings[index+1]);
+		pQueue.add(buildings[index+2]);
 		
-		int max = buildings[idx];
+		int max = buildings[index];
 		int postMax = pQueue.poll();
 		pQueue.clear();
 		
@@ -62,8 +62,8 @@ public class Solution {
 			return 0;
 		}
 		else {
-			check[idx+1] = false;
-			check[idx+2] = false;
+			check[index+1] = false;
+			check[index+2] = false;
 			return max - postMax;
 		}
 	}

@@ -30,16 +30,16 @@ public class Main {
 		System.out.println(pack(0, K));
 	}
 	
-	private static int pack(int idx, int available) {
-		if(idx >= N) return 0;
-		if(cache[idx][available] != -1)
-			return cache[idx][available];
+	private static int pack(int index, int available) {
+		if(index >= N) return 0;
+		if(cache[index][available] != -1)
+			return cache[index][available];
 		
-		int ret = pack(idx+1, available);
-		if(things[idx][0] <= available) {
-			ret = Math.max(ret, pack(idx+1, available-things[idx][0]) + things[idx][1]);
+		int ret = pack(index+1, available);
+		if(things[index][0] <= available) {
+			ret = Math.max(ret, pack(index+1, available-things[index][0]) + things[index][1]);
 		}
-		cache[idx][available] = ret;
+		cache[index][available] = ret;
 		return ret; 
 	}
 }
