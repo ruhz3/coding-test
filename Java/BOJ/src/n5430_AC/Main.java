@@ -47,16 +47,15 @@ public class Main {
 			if (isError)
 				sb.append("error\n");
 			else {
-				sb.append("[");
-				if (isReversed)
+				sb.append('[');
+				if (isReversed) {
 					for (int i = end; i >= start; i--)
 						sb.append(arr[i]).append(',');
-				else
+				} else {
 					for (int i = start; i <= end; i++)
 						sb.append(arr[i]).append(',');
-				if (sb.charAt(sb.length() - 1) == ',')
-					sb.deleteCharAt(sb.length() - 1);
-				sb.append("]\n");
+				}
+				sb.deleteCharAt(sb.lastIndexOf(",")).append("]\n");
 			}
 		}
 		System.out.println(sb.toString());
