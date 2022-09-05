@@ -1,2 +1,5 @@
-/.metadata/
-/.idea/
+.metadata
+
+Java/.idea
+Java/.metadata
+Java/Test/
