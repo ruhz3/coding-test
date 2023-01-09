@@ -2,6 +2,8 @@ package n1912_연속합;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -25,6 +27,10 @@ public class Main {
 			maxValue = Math.max(maxValue, cache[i]);
 		}
 		System.out.println(maxValue);
+		
+		Queue<Integer> queue = new LinkedList<>();
+		queue.offer(1);
 	}
+	
 
 }
